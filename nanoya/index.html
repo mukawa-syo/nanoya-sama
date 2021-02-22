@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>な野屋</title>
+    <link rel="stylesheet" href="common.css">
+    <link rel="icon" type="image/png" href="img/favicon.png" sizes="16x16">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1/slick/slick.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1/slick/slick.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1/slick/slick-theme.min.css">
+    <script>
+        $(function() {
+            $('.slider').slick({
+              speed: 1000,
+              autoplaySpeed: 1000,
+              autoplay: true,
+              dots: true,
+              infinite: true,
+              fade: true,
+              arrows: false,
+              appendDots: $('.slider'),
+              dotsClass: 'slide-dots',
+
+            });
+        });
+    </script>
+    
+    <script>
+        $(function() {
+            $('.hamburger').click(function() {
+                $(this).toggleClass('active');
+
+                if ($(this).hasClass('active')) {
+                    $('.first_navi').addClass('active');
+                } else {
+                    $('.first_navi').removeClass('active');
+                }
+            });
+            $('.header_navi a[href]').on('click', function(event) {
+                $('.hamburger.active').trigger('click');
+            });
+        });
+    </script>
+
+    <script>
+    $(function() {
+        // ページプラグインの埋め込みコードを返す
+        function pagePluginCode(w) {
+
+            // 幅に応じて高さを変更する場合は、変数 h に高さの値を代入
+            if(w > 310) {
+                var h = 660;
+            } else {
+                var h = 300;
+            }
+
+            // 書き換えたStep3のコードを「return」に記述
+            return '<div class="fb-page" data-href="https://m.facebook.com/&#x306a;&#x91ce;&#x5c4b;-292040071662842/" data-tabs="timeline" data-width="' + w + '" data-height="' + h + '" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://m.facebook.com/&#x306a;&#x91ce;&#x5c4b;-292040071662842/" class="fb-xfbml-parse-ignore"><a href="https://m.facebook.com/&#x306a;&#x91ce;&#x5c4b;-292040071662842/">な野屋</a></blockquote></div>';
+
+        }
+
+        // ページプラグインを追加する要素
+        var facebookWrap = $('.facebook-wrapper');
+        var fbBeforeWidth = ''; // 前回変更したときの幅
+        var fbWidth = facebookWrap.width(); // 今回変更する幅
+        var fbTimer = false;
+        $(window).on('load resize', function() {
+            if (fbTimer !== false) {
+                clearTimeout(fbTimer);
+            }
+            fbTimer = setTimeout(function() {
+                fbWidth = Math.floor(facebookWrap.width()); // 変更後の幅を取得し、小数点以下切り捨て
+                // 前回の幅から変更があった場合のみ処理
+                if(fbWidth != fbBeforeWidth) {
+                    facebookWrap.html(pagePluginCode(fbWidth)); // ページプラグインのコード変更
+                    window.FB.XFBML.parse(); // ページプラグインの再読み込み
+                    fbBeforeWidth = fbWidth; // 今回変更分を保存
+                }
+            }, 200);
+        });
+    });
+    </script>
+
+    <script>
+      var ua = navigator.userAgent.toLowerCase();
+      var isMobile = /iphone/.test(ua)||/android(.+)?mobile/.test(ua);
+
+      if (!isMobile) {
+        $('a[href^="tel:"]').on('click', function(e) {
+            e.preventDefault();
+        });
+      }
+    </script>
+
+</head>
+<body class="top_page_body">
+    <header id="header_surface">
+      <div class="header_lock">
+        <a class="header_heading" href="top_page.html">
+            <img class="header_img" src="img/logo_h.png"></img>
+        </a>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+      </div>
+        <div class="header_first_block">
+           <div class="first_navi">
+                <ul class="header_navi">
+                    <li class="header_navi_list"><a class="header_navi_link" href="#lunch_block">ランチ</a></li>
+                    <li class="header_navi_list"><a class="header_navi_link" href="#diner_block">ディナー</a></li>
+                    <li class="header_navi_list"><a class="header_navi_link" href="#shop_state_block">店内の様子</a></li>
+                    <li class="header_navi_list"><a class="header_navi_link" href="#access_block">アクセス</a></li>
+                    <li class="header_navi_list"><a class="header_navi_link" href="https://m.facebook.com/pages/category/Personal-Website/な野屋-1shiru3sai-1678677719064341/?locale2=ja_JP"><i class="fab fa-facebook-square fa-lg"></i></a></li>
+                    <li class="header_navi_list"><a class="header_navi_link" href="https://instagram.com/nanoya_1shir3sai?igshid=yfid9kjtl85j"><i class="fab fa-instagram fa-lg"></i></a></li>
+                </ul>
+           </div>
+           <ul class="slider">
+             <li class="slider_list"><img class="slider_img" src="img/slideshow1.png" /></li>
+             <li class="slider_list"><img class="slider_img" src="img/slideshow2.png" /></li>
+             <li class="slider_list"><img class="slider_img" src="img/slideshow3.png" /></li>
+             <li class="slider_list"><img class="slider_img" src="img/slideshow4.png" /></li>
+             <li class="slider_list"><img class="slider_img" src="img/slideshow6.png" /></li>
+             <li class="slider_list"><img class="slider_img" src="img/slideshow7.png" /></li>
+             <li class="slider_list"><img class="slider_img" src="img/slideshow8.png" /></li>
+             <li class="slider_list"><img class="slider_img" src="img/slideshow10.png" /></li>
+             <li class="slider_list"><img class="slider_img" src="img/slideshow11.png" /></li>
+           </ul>
+       </div>
+    </header>
+
+    <main class="top_page_main">
+        <section class="submain_block">
+            <div class="submain_infomation">
+                <div class="submain_index_explanation">
+                    <p class="submenu_explanation">今治古民家カフェ</p>
+                    <h2 class="submenu_index">な野屋</h2>
+                </div>
+                <img class="submain_img" src="img/top1.png">
+                <p class="history">人口約5000人の菊間町。昔はこの町にも沢山の人と商業施設がありました。<br>少しでも空き家が利用できるなら…と、2015年、築100年以上の古民家を改装してカフェレストランに。自分達で畑も田んぼもやりながら、地元の旬な食材を使ったココロと身体に優しいお料理を目指しています。</p>
+            </div>
+        </section>
+        <section class="first_block">
+            <div class="shop_information">
+                <div class="shop_details">
+                    <table class="shop_details_table">
+                      <div class="caption">
+                        <p class="caption_child">一汁三菜</p>
+                        <h2 class="caption_parent">な野屋</h2>
+                      </div>
+                        <tr class="shop_details_tr_res">
+                            <th class="shop_details_th_res">住所</th>
+                            <td class="shop_details_td_res">愛媛県今治市菊間町浜2259</td>
+                        </tr>
+                        <tr class="shop_details_tr_res">
+                            <th class="shop_details_th_res">電話</th>
+                            <td class="shop_details_td_res"><a href="tel:090-8694-0768">090-8694-0768</a></td>
+                        </tr>
+                        <tr class="shop_details_tr_msg">
+                          <td class="shop_details_td_msg">※座席が限られておりますので、事前にご連絡いただけましたら、安心してご来店頂けます。</td>
+                        </tr>
+                        <tr class="shop_details_tr">
+                            <th class="shop_details_th">営業日</th>
+                            <td class="shop_details_td">【な野屋ランチ】水・木・金・土</td>
+                            <td class="shop_details_td">【限定パスタランチ】第２、第４火曜日</td>
+                        </tr>
+                        <tr class="shop_details_tr">
+                            <th class="shop_details_th_long">営業時間</th>
+                            <td class="shop_details_td">【ランチ】11:30 ~ 14:00<p class="last_order">(ラストオーダー)</p></td>
+                            <td class="shop_details_td">【ディナー】要予約</td>
+                        </tr>
+                    </table>
+                    <p class="shop_details_annotation">※店内で、な野屋米、手作り味噌・漬物・惣菜などを販売しております。スタッフにお声かけください。<br>※サイクルスタンドもご用意しております。</p>
+                </div>
+                    <div class="facebook-wrapper"></div>
+            </div>
+            <div class="shop_sns_img">
+            <div class="sns_block">
+                <a class="sns_link_send" href="https://m.facebook.com/pages/category/Personal-Website/な野屋-1shiru3sai-1678677719064341/?locale2=ja_JP">
+                    <i class="fab fa-facebook my-example"></i>
+                    <p class="sns">Face book</p>
+                    <p class="sns_link_url">な野屋　1shir3sai</p>
+                </a>
+            </div>
+            <div class="sns_block">
+                <a class="sns_link_send" href="https://instagram.com/nanoya_1shir3sai?igshid=yfid9kjtl85j">
+                    <i class="fab fa-instagram my-example"></i>
+                    <p class="sns">Instagram</p>
+                    <p class="sns_link_url">nanoya_1shir3sai</p>
+                </a>
+            </div>
+
+        </div>
+        </section>
+
+        <section id="lunch_block">
+            <div class="lunch_infomation">
+                <div class="lunch_index_explanation">
+                    <h2 class="lunch_index">な野屋ランチ</h2>
+                    <p class="lunch_explanation">一汁三菜</p>
+                </div>
+                <div class="lunch_menu_money">
+                    <p class="lunch_menu">週替わりランチ</p>
+                    <p class="lunch_money">1,200</p>
+                    <p class="lunch_tax">円（税込）</p>
+                </div>
+                <img class="lunch_img" src="img/lunch.png">
+                <p class="lunch_menu_example">メニュー例</p>
+                <ul class="luunch_linenup">
+                    <li class="lunch_details">前菜</li>
+                    <li class="lunch_details_appetizer">季節のお野菜　三種盛り</li>
+                </ul>
+                <ul class="luunch_linenup">
+                    <li class="lunch_details">メイン</li>
+                    <li class="lunch_details_main">シェフのおまかせ主菜</li>
+                </ul>
+                <ul class="luunch_linenup_ball">
+                    <li class="lunch_details_ball_main">小鉢</li>
+                    <li class="lunch_details_ball_top"><p class="diagonal line">香物</p></li>
+                    <li class="lunch_details_ball"><p class="diagonal line">御飯</p></li>
+                    <li class="lunch_details_ball"><p class="diagonal line">汁物</p></li>
+                </ul>
+                <ul class="luunch_linenup_drink">
+                    <li class="lunch_details_drink">ドリンク</li>
+                    <li class="lunch_details_drink_menu">ミニな野屋コーヒー（ホット）・ミニホットティー・ミニみかんジュースからお選びください。<br>※ラージサイズに変更できます＋100円<br>※夏季のみアイスコーヒー・アイスティーに変更できます＋100円</li>
+                </ul>
+                <ul class="luunch_linenup">
+                    <li class="lunch_details">デザート</li>
+                    <li class="lunch_details_dessert">ミニデザート１種類（3種類の中からお選びください）<br>３種盛合わせに変更も可能です＋200円になります</li>
+                </ul>
+                <ul class="luunch_linenup_last">
+                    <li class="lunch_details_last">★ランチ以外のお料理（御前や会食）も対応いたします<br>お気軽にご相談ください</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="diner_block">
+            <div class="diner_infomation">
+                <div class="index_explanation">
+                    <h2 class="diner_index">な野屋ディナー</h2>
+                </div>
+                <p class="diner_explanation">夜のお食事は予約制です<br>5名様以上、3日前までにご予約ください。（最大25名様まで）</p>
+                <ul class="diner_example">
+                    <li class="diner_example_list">女子会</li>
+                    <li class="diner_example_list">お祝い事（お誕生日会、還暦祝いなど）</li>
+                    <li class="diner_example_list">法事（折詰可）</li>
+                    <li class="diner_example_list">グループに合わせたメニューをお作りいたします。</li>
+                    <li class="diner_example_list">お気軽にお電話ください。</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="shop_state_block">
+            <div class="state_infomation">
+                <div class="index_explanation">
+                    <h2 class="state_index">お店の様子</h2>
+                </div>
+                <div class="state_img_block">
+                    <div class="state_img_explanation">
+                        <img class="state_img" src="img/mise11.png">
+                        <p class="state_annotation">季節によって咲く花々がお客様をお出迎えします</p>
+                    </div>
+                    <div class="state_img_explanation">
+                        <img class="state_img" src="img/mise12.png">
+                        <p class="state_annotation">窓際の外が眺められるイスの席から、風情のある季節の花々が眺める事ができます。</p>
+                    </div>
+                </div>
+                <div class="state_img_block">
+                    <div class="state_img_explanation">
+                        <img class="state_img" src="img/mise13.png">
+                        <p class="state_annotation">風情のある庭園を眺めながら、一枚板のテーブルとたたみ座布団でゆったりランチ</p>
+                    </div>
+                    <div class="state_img_explanation">
+                        <img class="state_img" src="img/mise14.png">
+                        <p class="state_annotation">お席に座るとお一人おひとりにかわいいお花がお出迎えします。</p>
+                    </div>
+                </div>
+                <div class="state_img_block">
+                    <div class="state_img_explanation">
+                        <img class="state_img" src="img/mise15.png">
+                        <p class="state_annotation">店主自ら作るお米や野菜。お店で味わっていただけますし、ご希望でしたらお分けしいたします。</p>
+                    </div>
+                    <div class="state_img_explanation">
+                        <img class="state_img" src="img/mise16.png">
+                        <p class="state_annotation">個室（イス席）もあります。<br>特別な時間をお過ごしください。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="access_block">
+            <div class="access_infomation">
+                <div class="index_explanation">
+                    <h2 class="access_index">アクセス</h2>
+                </div>
+                <div class="access_google_map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d413.29223146795863!2d132.84944682876045!3d34.03520367862272!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3550189698731c4d%3A0x6ece074c0dda6613!2z44CSNzk5LTIzMDMg5oSb5aqb55yM5LuK5rK75biC6I-K6ZaT55S65rWc77yS77yS77yW77yV!5e0!3m2!1sja!2sjp!4v1612941061719!5m2!1sja!2sjp" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+                    <p class="access_address">愛媛県今治市菊間町浜2259</p>
+                <div class="access_map_block">
+                    <div class="access_map_explanation">
+                        <img class="access_map" src="img/map2.jpg">
+                    </div>
+                </div>
+            </div>
+            <div class="jump_position">
+                <div class="top_page_jump">
+                    <a class="top_jump" href="top_page.html"></a>
+                </div>
+          </div>
+        </section>
+    </main>
+
+    <footer class="top_page_footer">
+        <div class="footer_block">
+            <div class="footer_img_block">
+                <img class="footer_img" src="img/logo_h.png">
+            </div>
+            <div class="footer_list_block">
+                <div class="footer_menu_block">
+                    <ul class="footer_menu_list">
+                        <li class="footer_menu_list_li"><a class="footer_menu_link" href="#lunch_block">ランチ</a></li>
+                        <li class="footer_menu_list_li"><a class="footer_menu_link" href="#diner_block">ディナー</a></li>
+                        <li class="footer_menu_list_li"><a class="footer_menu_link" href="#shop_state_block">店内</a></li>
+                        <li class="footer_menu_list_li"><a class="footer_menu_link" href="#access_block">アクセス</a></li>
+                    </ul>
+                    <div class="footer_menu_address">
+                        <ul class="footer_inquiry">
+                            <li class="footer_contact">CONTACT</li>
+                            <li class="footer_contact">SNS</li>
+                        </ul>
+                        <ul class="footer_inquiry">
+                            <li class="footer_contact_address">愛媛県今治市菊間町浜2259</li>
+                            <li class="footer_contact_sns"><a class="footer_menu_link_sns" href="https://m.facebook.com/pages/category/Personal-Website/な野屋-1shiru3sai-1678677719064341/?locale2=ja_JP">facebook<div class="footer_face"><i class="fab fa-facebook-square fa-lg"></i></div></a></li>
+                            <li class="footer_contact_sns"><a class="footer_menu_link_sns" href="https://instagram.com/nanoya_1shir3sai?igshid=yfid9kjtl85j">instagram<div class="footer_insta"><i class="fab fa-instagram fa-lg"></div></i></a></li>
+                        </ul>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer_img_block_res">
+            <img class="footer_img_res" src="img/logo_h.png">
+        </div>
+        <div class="copy-right">
+            <small>©nanoya</small>
+        </div>
+    </footer>
+</body>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v9.0" nonce="4OJ1z0sZ"></script>
+</html>
