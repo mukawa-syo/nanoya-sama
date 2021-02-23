@@ -179,21 +179,77 @@ a, h2, h3, p, li,caption, th, td{
 
 .slider {
     margin: 20px auto;
-        margin-bottom: 50px;
+    margin-bottom: 50px;
     width: 100%;
 }
 
 .slider img{
-	height: auto;
-	width: 100%;
+  	height: auto;
+  	width: 100%;
+}
+.slide-dots {
+    display: flex;
+}
+ul.slide-dots {
+    display: flex;
+    list-style: none;
+    position: relative;
+    bottom: 25px;
+    left: 690px;
 }
 
-ul.slide-dots {
-    display: inline-flex;
-    list-style: none;
-    position: sticky;
-    left: 900px;
-    bottom: 45px;
+@media screen and (max-width:1410px) {
+    ul.slide-dots {
+        left: 640px;
+    }
+}
+
+@media screen and (max-width:1350px) {
+    ul.slide-dots {
+        left: 570px;
+    }
+}
+
+@media screen and (max-width:1270px) {
+    ul.slide-dots {
+        left: 515px;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    ul.slide-dots {
+        left: 450px;
+    }
+}
+
+@media screen and (max-width:1120px) {
+    ul.slide-dots {
+        left: 380px;
+    }
+}
+
+@media screen and (max-width:1030px) {
+    ul.slide-dots {
+        left: 320px;
+    }
+}
+
+@media screen and (max-width:940px) {
+    ul.slide-dots {
+        left: 260px;
+    }
+}
+
+@media screen and (max-width:815px) {
+    ul.slide-dots {
+        left: 240px;
+    }
+}
+
+@media screen and (max-width:790px) {
+    ul.slide-dots {
+        left: 210px;
+    }
 }
 
 @media screen and (max-width:767px) {
@@ -205,6 +261,12 @@ ul.slide-dots {
 
 .slide-dots li {
     width: 40px;
+}
+
+@media screen and (max-width:870px) {
+    .slide-dots li {
+        width: 35px;
+    }
 }
 
 @media screen and (max-width:767px) {
@@ -222,6 +284,12 @@ button {
     border: none;
 }
 
+@media screen and (max-width:870px) {
+    button {
+        width: 25px;
+        height: 4px;
+    }
+}
 
 section {
     padding-bottom: 200px;
