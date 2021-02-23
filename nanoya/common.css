@@ -311,7 +311,6 @@ header#header_surface {
     }
 }
 
-
 .header_first_block {
   display: block !important;
   margin-left: 45px;
@@ -382,7 +381,6 @@ a.header_navi_link:hover {
     }
 }
 
-
 @media screen and (max-width:767px) {
     .header_lock {
         position: fixed;
@@ -414,6 +412,7 @@ a.header_navi_link:hover {
         width: 50%;
     }
 }
+
 img.header_navi_link_insta {
     width: 23px;
     height: 23px;
@@ -770,7 +769,6 @@ h2.caption_parent {
         margin-bottom: 5px;
     }
 }
-
 
 p.caption_child {
     text-align: left;
@@ -1431,7 +1429,6 @@ p.shop_details_annotation {
     }
 }
 
-
 .facebook-wrapper {
     max-width: 500px;
     margin: 0 auto;
@@ -1453,7 +1450,6 @@ p.shop_details_annotation {
         width: 90%;
     }
 }
-
 
 .facebook-wrapper > .fb-page {
     width: 100%;
@@ -1514,7 +1510,6 @@ i.fab.fa-facebook.my-example {
     }
 }
 
-
 @media screen and (max-width: 428px) {
     i.fab.fa-facebook.my-example {
         color: #aaa;
@@ -1563,7 +1558,6 @@ a.sns_link_send {
 a.sns_link_send:hover {
     font-size: 20px;
 }
-
 
 p.sns {
     margin: 0;
@@ -1615,7 +1609,6 @@ p.sns_link_url {
     }
 }
 
-
 /*lunch*/
 section#lunch_block {
     width: 75%;
@@ -1649,7 +1642,6 @@ h2.lunch_index {
         font-weight: 600;
     }
 }
-
 
 @media screen and (max-width: 768px) {
     h2.lunch_index {
@@ -2029,7 +2021,6 @@ ul.luunch_linenup_last {
         padding-top: 15px;
     }
 }
-
 
 li.lunch_details {
     width: 105px;
@@ -2841,7 +2832,6 @@ li.diner_example_list:last-child {
     list-style: none;
 }
 
-
 /*shop_state*/
 section#shop_state_block {
     width: 75%;
@@ -2878,7 +2868,6 @@ h2.state_index {
         font-weight: 600;
     }
 }
-
 
 @media screen and (max-width: 375px) {
     h2.state_index {
@@ -2984,7 +2973,6 @@ section#access_block {
     }
 }
 
-
 h2.access_index {
     font-size: 42px;
     margin-left: 65px;
@@ -3039,7 +3027,6 @@ h2.access_index {
         margin: auto;
     }
 }
-
 
 iframe {
     width: 100%;
@@ -3151,7 +3138,6 @@ img.access_map {
     }
 }
 
-
 .top_page_jump {
     background-color: #fff;
     width: 86%;
@@ -3191,7 +3177,6 @@ img.access_map {
         margin-top: 85px;
     }
 }
-
 
 a.top_jump:before {
     position: relative;
@@ -3260,7 +3245,6 @@ footer.top_page_footer {
     display: flex;
 }
 
-
 img.footer_img {
     width: 230px;
     height: auto;
@@ -3298,7 +3282,6 @@ img.footer_img {
         display: none;
     }
 }
-
 
 .footer_list_block {
     margin-left: 80px;

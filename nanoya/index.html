@@ -23,7 +23,6 @@
               arrows: false,
               appendDots: $('.slider'),
               dotsClass: 'slide-dots',
-
             });
         });
     </script>
@@ -47,37 +46,31 @@
 
     <script>
     $(function() {
-        // ページプラグインの埋め込みコードを返す
         function pagePluginCode(w) {
 
-            // 幅に応じて高さを変更する場合は、変数 h に高さの値を代入
             if(w > 310) {
                 var h = 660;
             } else {
                 var h = 300;
             }
 
-            // 書き換えたStep3のコードを「return」に記述
             return '<div class="fb-page" data-href="https://m.facebook.com/&#x306a;&#x91ce;&#x5c4b;-292040071662842/" data-tabs="timeline" data-width="' + w + '" data-height="' + h + '" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://m.facebook.com/&#x306a;&#x91ce;&#x5c4b;-292040071662842/" class="fb-xfbml-parse-ignore"><a href="https://m.facebook.com/&#x306a;&#x91ce;&#x5c4b;-292040071662842/">な野屋</a></blockquote></div>';
 
         }
-
-        // ページプラグインを追加する要素
         var facebookWrap = $('.facebook-wrapper');
-        var fbBeforeWidth = ''; // 前回変更したときの幅
-        var fbWidth = facebookWrap.width(); // 今回変更する幅
+        var fbBeforeWidth = '';
+        var fbWidth = facebookWrap.width();
         var fbTimer = false;
         $(window).on('load resize', function() {
             if (fbTimer !== false) {
                 clearTimeout(fbTimer);
             }
             fbTimer = setTimeout(function() {
-                fbWidth = Math.floor(facebookWrap.width()); // 変更後の幅を取得し、小数点以下切り捨て
-                // 前回の幅から変更があった場合のみ処理
+                fbWidth = Math.floor(facebookWrap.width());
                 if(fbWidth != fbBeforeWidth) {
-                    facebookWrap.html(pagePluginCode(fbWidth)); // ページプラグインのコード変更
-                    window.FB.XFBML.parse(); // ページプラグインの再読み込み
-                    fbBeforeWidth = fbWidth; // 今回変更分を保存
+                    facebookWrap.html(pagePluginCode(fbWidth));
+                    window.FB.XFBML.parse();
+                    fbBeforeWidth = fbWidth;
                 }
             }, 200);
         });
@@ -144,6 +137,7 @@
                 <p class="history">人口約5000人の菊間町。昔はこの町にも沢山の人と商業施設がありました。<br>少しでも空き家が利用できるなら…と、2015年、築100年以上の古民家を改装してカフェレストランに。自分達で畑も田んぼもやりながら、地元の旬な食材を使ったココロと身体に優しいお料理を目指しています。</p>
             </div>
         </section>
+        
         <section class="first_block">
             <div class="shop_information">
                 <div class="shop_details">
